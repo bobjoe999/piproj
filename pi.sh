@@ -8,3 +8,5 @@ sudo apt-get install -y git
 git clone https://github.com/adafruit/Raspberry-Pi-Installer-Scripts.git
 cd Raspberry-Pi-Installer-Scripts
 sudo python3 adafruit-pitft.py --display=st7789_240x135 --rotation=90 --install-type=fbcp
+echo "display_hdmi_rotate=0x10000" | sudo tee -a /boot/config.txt
+sudo reboot
